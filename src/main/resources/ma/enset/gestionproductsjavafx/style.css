@@ -1,0 +1,101 @@
+/* General Root Styling */
+.root {
+    -fx-background-color: #F5F7FA;
+    -fx-font-family: "Arial";
+}
+
+/* BorderPane - Main Container */
+.border-pane {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-padding: 20px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 10, 0, 0, 3);
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: #444;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+/* TextFields */
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #DDD;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-transition: 0.3s;
+}
+.text-field:focused {
+    -fx-border-color: #007BFF;
+    -fx-border-width: 2px;
+}
+
+/* Buttons - Default */
+.button {
+    -fx-background-color: linear-gradient(to bottom, #007BFF, #0056b3);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-border-radius: 6px;
+    -fx-padding: 10px 20px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0, 0, 3);
+    -fx-transition: all 0.3s;
+}
+.button:hover {
+    -fx-background-color: linear-gradient(to bottom, #0056b3, #003f7f);
+}
+.button:pressed {
+    -fx-background-color: #003f7f;
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+/* Delete Button - Red */
+#btn_delete {
+    -fx-background-color: linear-gradient(to bottom, #DC3545, #B02A37);
+}
+#btn_delete:hover {
+    -fx-background-color: linear-gradient(to bottom, #B02A37, #891D28);
+}
+#btn_delete:pressed {
+    -fx-background-color: #891D28;
+}
+
+/* ListView */
+.list-view {
+    -fx-background-color: white;
+    -fx-border-color: #DDD;
+    -fx-border-radius: 8px;
+    -fx-padding: 5px;
+}
+
+/* ListView Items */
+.list-cell {
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-border-color: transparent transparent #EEE transparent;
+    -fx-transition: 0.3s;
+}
+.list-cell:hover {
+    -fx-background-color: #E3F2FD;
+}
+.list-cell:selected {
+    -fx-background-color: #007BFF;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Animation Effects */
+@keyframes fade-in {
+    0% { -fx-opacity: 0; }
+    100% { -fx-opacity: 1; }
+}
+.border-pane {
+    -fx-opacity: 0;
+    -fx-transition: opacity 0.8s;
+    animation: fade-in 0.8s ease-in-out;
+}
